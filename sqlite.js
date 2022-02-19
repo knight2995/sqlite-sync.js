@@ -22,13 +22,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-//Testa se é electron, e troca o stderr e stdout para console.
-//Test if is Electon, and change sterr e stdout for console.
-if (process.versions.electron) {
-	process.stderr.write = console.error.bind(console);
-	process.stdout.write = console.log.bind(console);
-}
-
 //Requeries
 var fs = require('fs');
 var SQL = require('sql.js');
